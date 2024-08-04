@@ -11,7 +11,7 @@ def is_cat(x):
     return x[0].isupper()
 
 # %% dog_vs_cat.ipynb 3
-learn = load_learner('../test/model_catvdog.pkl')
+learn = load_learner('test/model_catvdog.pkl')
 
 # %% dog_vs_cat.ipynb 5
 # labels = learn.dls.vocab
