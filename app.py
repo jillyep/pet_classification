@@ -30,7 +30,7 @@ def classify_image(img):
 #              outputs=gr.Label(num_top_classes=3)).launch(share=True)
 image = gr.Image(width=192, height=192)
 label = gr.Label()
-examples = ['../data/dog.jpg', '../data/dog2.jpg', '../data/cat.jpg', '../data/hotdog.jpg',
-            '../data/cat2.jpg', '../data/cougarwoman.jpg']
+examples = ['dog.jpg', 'dog2.jpg', 'cat.jpg', 'hotdog.jpg',
+            'cat2.jpg', 'cougarwoman.jpg']
 intf = gr.Interface(fn=classify_image, inputs=image, outputs=label, examples=examples)
 intf.launch(inline=False)
