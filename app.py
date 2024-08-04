@@ -19,7 +19,7 @@ categories = ('Dog', 'Cat')
 def classify_image(img):
     pred, pred_idx, probs = learn.predict(img)
     return dict(zip(categories, map(float, probs)))
-classify_image(im)
+# classify_image(img)
 # def predict(img):
 #     img = PILImage.create(img)
 #     pred, pred_idx, probs = learn.predict(img)
@@ -30,7 +30,7 @@ classify_image(im)
 #              outputs=gr.Label(num_top_classes=3)).launch(share=True)
 image = gr.Image(width=192, height=192)
 label = gr.Label()
-examples = ['../data/dog.jpg', '../data/dog2.jpg', '../data/cat.jpg', '../data/hotdog.jpg',
-            '../data/cat2.jpg', '../data/cougarwoman.jpg']
+examples = ['dog.jpg', 'dog2.jpg', 'cat.jpg',
+            'cat2.jpg', 'cougarwoman.jpg']
 intf = gr.Interface(fn=classify_image, inputs=image, outputs=label, examples=examples)
 intf.launch(inline=False)
