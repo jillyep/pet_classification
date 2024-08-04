@@ -19,7 +19,7 @@ categories = ('Dog', 'Cat')
 def classify_image(img):
     pred, pred_idx, probs = learn.predict(img)
     return dict(zip(categories, map(float, probs)))
-classify_image(im)
+classify_image(img)
 # def predict(img):
 #     img = PILImage.create(img)
 #     pred, pred_idx, probs = learn.predict(img)
